@@ -8,18 +8,49 @@
   公共 helper。主要负责日志输出、下载根目录解析、Kaggle / Hugging Face / gdown / Dataverse 这类常用下载函数，以及 `.done` 标记和手动下载说明文件。
 - `download_oph_datasets.sh`
   眼科数据集下载脚本。
+  包括：
+  `eyepacs`、`aptos2019`、`odir5k`、`harvard-gf`、`fairfedmed-oph`、`grape`、`rfmid`、`idrid`、`jsiec`、`oculoscope`、`mixnaf`
 - `download_chest_datasets.sh`
   胸片数据集下载脚本。
+  包括：
+  `mimic-cxr-jpg`、`chexpert`、`chestxray14`、`montgomery`、`shenzhen`、`brixia-covid19`、`bimcv-covid19`、`tb-portals`、`rsna-pneumonia`、`midrc`、`fairfedmed-chest`
 - `download_skin_datasets.sh`
   皮肤图像数据集下载脚本。
+  包括：
+  `isic2019`、`ham10000`、`fitzpatrick17k`、`ddi`、`derm7pt`
 - `download_pathology_datasets.sh`
   病理数据集下载脚本。
+  包括：
+  `tcga`、`tcga-brca`、`tcga-ucec`、`tcga-crc`、`cptac-ucec`、`camelyon17`、`abctb`
 - `download_neuro_datasets.sh`
   神经影像数据集下载脚本。
+  包括：
+  `openfmri-ds000245`、`oasis3`、`ppmi`、`uk-biobank`
 - `download_physiology_datasets.sh`
   生理信号 / 生理测量数据集下载脚本。
+  包括：
+  `ubfc-phys`、`bp4dplus`、`ecg-fitness`
 - `download_general_datasets.sh`
   通用数据集下载脚本。
+  包括：
+  `brfss2021`、`adult-income`、`cifar10`、`cifar100`、`stanford-dogs`、`celeba`
+
+## 分类和数据集对应关系
+
+- 眼科
+  `EyePACS`、`APTOS2019`、`ODIR5K`、`Harvard-GF`、`FairFedMed-Oph`、`GRAPE`、`RFMiD`、`IDRiD`、`JSIEC`、`OculoScope`、`MixNAF`
+- 胸片
+  `MIMIC-CXR-JPG`、`CheXpert`、`ChestXray14`、`Montgomery`、`Shenzhen`、`BrixIA-COVID19`、`BIMCV-COVID19`、`TB-Portals`、`RSNA-Pneumonia`、`MIDRC`、`FairFedMed-Chest`
+- 皮肤
+  `ISIC2019`、`HAM10000`、`Fitzpatrick17k`、`DDI`、`Derm7pt`
+- 病理
+  `TCGA`、`TCGA-BRCA`、`TCGA-UCEC`、`TCGA-CRC`、`CPTAC-UCEC`、`CAMELYON17`、`ABCTB`
+- 神经影像
+  `OpenfMRI-ds000245`、`OASIS-3`、`PPMI`、`UK-Biobank`
+- 生理信号 / 生理测量
+  `UBFC-PHYS`、`BP4D+`、`ECG-Fitness`
+- 通用
+  `BRFSS2021`、`Adult-Income`、`CIFAR-10`、`CIFAR-100`、`Stanford-Dogs`、`CelebA`
 
 ## 使用方式
 
