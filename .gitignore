@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+datasets/
+*.done
+ACCESS_INSTRUCTIONS.txt

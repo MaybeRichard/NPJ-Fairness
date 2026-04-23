@@ -2,38 +2,24 @@
 
 这个目录只保留数据集下载相关的脚本，没有放训练、评估、画图之类的实验脚本。
 
-整体结构很简单：
+目录结构现在比较简单：
 
-- `download_dataset_common.sh`
+- `scripts/download_dataset_common.sh`
   公共 helper。主要负责日志输出、下载根目录解析、Kaggle / Hugging Face / gdown / Dataverse 这类常用下载函数，以及 `.done` 标记和手动下载说明文件。
-- `download_oph_datasets.sh`
+- `scripts/download_oph_datasets.sh`
   眼科数据集下载脚本。
-  包括：
-  `eyepacs`、`aptos2019`、`odir5k`、`harvard-gf`、`fairfedmed-oph`、`grape`、`rfmid`、`idrid`、`jsiec`、`oculoscope`、`mixnaf`
-- `download_chest_datasets.sh`
+- `scripts/download_chest_datasets.sh`
   胸片数据集下载脚本。
-  包括：
-  `mimic-cxr-jpg`、`chexpert`、`chestxray14`、`montgomery`、`shenzhen`、`brixia-covid19`、`bimcv-covid19`、`tb-portals`、`rsna-pneumonia`、`midrc`、`fairfedmed-chest`
-- `download_skin_datasets.sh`
+- `scripts/download_skin_datasets.sh`
   皮肤图像数据集下载脚本。
-  包括：
-  `isic2019`、`ham10000`、`fitzpatrick17k`、`ddi`、`derm7pt`
-- `download_pathology_datasets.sh`
+- `scripts/download_pathology_datasets.sh`
   病理数据集下载脚本。
-  包括：
-  `tcga`、`tcga-brca`、`tcga-ucec`、`tcga-crc`、`cptac-ucec`、`camelyon17`、`abctb`
-- `download_neuro_datasets.sh`
+- `scripts/download_neuro_datasets.sh`
   神经影像数据集下载脚本。
-  包括：
-  `openfmri-ds000245`、`oasis3`、`ppmi`、`uk-biobank`
-- `download_physiology_datasets.sh`
+- `scripts/download_physiology_datasets.sh`
   生理信号 / 生理测量数据集下载脚本。
-  包括：
-  `ubfc-phys`、`bp4dplus`、`ecg-fitness`
-- `download_general_datasets.sh`
+- `scripts/download_general_datasets.sh`
   通用数据集下载脚本。
-  包括：
-  `brfss2021`、`adult-income`、`cifar10`、`cifar100`、`stanford-dogs`、`celeba`
 
 ## 分类和数据集对应关系
 
@@ -59,10 +45,10 @@
 例如：
 
 ```bash
-bash dataset_downloads/download_oph_datasets.sh --help
-bash dataset_downloads/download_oph_datasets.sh harvard-gf fairfedmed-oph
-bash dataset_downloads/download_skin_datasets.sh isic2019 ham10000
-DOWNLOAD_ROOT=/data/datasets bash dataset_downloads/download_chest_datasets.sh chexpert
+bash dataset_downloads/scripts/download_oph_datasets.sh --help
+bash dataset_downloads/scripts/download_oph_datasets.sh harvard-gf fairfedmed-oph
+bash dataset_downloads/scripts/download_skin_datasets.sh isic2019 ham10000
+DOWNLOAD_ROOT=/data/datasets bash dataset_downloads/scripts/download_chest_datasets.sh chexpert
 ```
 
 ## 下载目录
@@ -92,4 +78,5 @@ DOWNLOAD_ROOT=/your/path
 
 - 只保留了下载脚本本身，没有把实验脚本和中间结果一起带进来。
 - 把眼科下载脚本也统一成和其他域脚本一样，复用 `download_dataset_common.sh`，避免 helper 重复维护。
+- 把所有下载相关的 bash 脚本都收进了 `scripts/`，目录会更干净一些。
 - 所有脚本都重新跑过 `bash -n`，至少保证了基本的 shell 语法是通的。

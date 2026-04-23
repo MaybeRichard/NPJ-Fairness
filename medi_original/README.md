@@ -1,5 +1,8 @@
 ## MeDi
 
+这份目录保留的是原始 MeDi 主干代码快照，主要用于参考原始实现。  
+这里不包含后面为 `ODIR-5K` 和 `Harvard-GF` 做的特化版本，也不是当前仓库里建议优先改动的目录。
+
 **Metadata-Guided Diffusion Models for Histopathology**
 
 MeDi is an end-to-end pipeline that:
