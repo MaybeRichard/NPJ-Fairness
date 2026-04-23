@@ -15,3 +15,9 @@
 - 新数据集接入 MeDi 的整体实验思路
 - 通用的缺失子群计划生成脚本
 - fairness 指标评估代码
+
+另外也单独放了一份原始 MeDi 主干代码，放在：
+
+- [medi_original](./medi_original)
+
+这里保留的是原始 MeDi 的训练、采样、嵌入、线性评估和 shell 启动脚本，不混入后面为 `ODIR-5K` 和 `Harvard-GF` 做的特化版本。
